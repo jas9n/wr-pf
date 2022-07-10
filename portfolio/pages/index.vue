@@ -1,34 +1,28 @@
 <template>
   <div id="home">
-    <navbar/>
-    <div id="birds" class="bg-black h-screen" ref="birdsRef">
-
-    </div>
-    <div id="splash" class="bg-white h-screen">
-
-    </div>
+    <navbar />
+    <div id="birds" class="bg-black h-screen"></div>
+    <div id="splash" class="bg-white h-screen"></div>
   </div>
 </template>
 
 <script>
-import BIRDS from "vanta/src/vanta.birds";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import BIRDS from 'vanta/dist/vanta.birds.min'
+import gsap from 'gsap'
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
-console.log(ScrollTrigger);
+console.log(ScrollTrigger)
 
 export default {
   name: 'Home',
   data() {
-    return {
-
-    }
+    return {}
   },
   mounted() {
     this.vantaEffect = BIRDS({
-      el: this.$refs.birdsRef,
+      el: '#birds',
       mouseControls: false,
       touchControls: false,
       gyroControls: false,
@@ -43,7 +37,7 @@ export default {
       wingSpan: 20.0,
       speedLimit: 3.0,
       quantity: 4.0,
-    });
-  }
+    })
+  },
 }
 </script>

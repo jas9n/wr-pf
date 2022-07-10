@@ -2,6 +2,10 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
+  server: {
+    port: 8080,
+  },
+
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -19,16 +23,15 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [
-      {src: 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js'},
-      {src: 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js'},
-
-    ]
+      {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js',
+      },
+      // { src: 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js' },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '~/assets/base.css'
-  ],
+  css: ['~/assets/base.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -41,7 +44,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     'nuxt-gsap-module',
-    'vanta'
+    // 'vanta',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
