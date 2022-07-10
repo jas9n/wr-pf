@@ -18,6 +18,11 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      {src: 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js'},
+      {src: 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js'},
+
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -35,6 +40,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    'nuxt-gsap-module',
+    'vanta'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
