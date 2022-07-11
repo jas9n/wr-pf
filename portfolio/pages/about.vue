@@ -21,8 +21,9 @@
                 </div>
             </div>
         </section>
-        <section id="team" class="h-auto min-h-screen w-full flex flex-col justify-center items-center">
-            <h2 class="w-3/4 text-white text-5xl text-center font-medium overflow-visible">Our team.</h2>
+        <section id="team" class="h-auto min-h-screen w-full flex flex-col justify-center items-center text-white text-center space-y-4">
+            <h2 class="w-3/4 text-5xl font-medium overflow-visible">Our team.</h2>
+            <p class="w-3/4 text-lg">Meet our dedicated team of designers, artists, and writers.</p>
             <div id="content" class="h-auto w-3/4 flex flex-col justify-center items-center">
                 
             </div>
