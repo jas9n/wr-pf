@@ -7,13 +7,13 @@
                         <h1 class="text-3xl  font-semibold mx-1 text-white overflow-visible">WebRising</h1>
                     </nuxt-link>
                 </div>
-                <ul id="links" class="hidden justify-center items-center space-x-10 text-lg text-white md:flex">
+                <ul id="links" class="hidden justify-center items-center space-x-10 text-lg text-white md:flex lg:space-x-14">
                     <li>About Us</li>
                     <li>Our Work</li>
                     <li>Our Services</li>
                 </ul>
                 <a id="contact" class="hidden md:block" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=team@webrising.org" target="_blank">
-                    <button class="px-4 py-2 border border-white text-base text-white rounded transition duration-200 hover:bg-white hover:text-black">
+                    <button class="px-4 py-2 border border-white text-base text-white rounded ease-in duration-200 hover:bg-white hover:text-black">
                         <p>Contact Us</p>
                     </button>
                 </a>
@@ -26,8 +26,9 @@
                 </div>
             </div>
         </div>
-        <div id="menu" v-if="menu" class="fixed inset-0 h-screen w-full text-white text-xl z-30 pl-16 bg-black md:hidden">
-            <ul id="links" class="h-full flex flex-col justify-center items-start space-y-10 text-xl text-white">
+        <div id="menu" v-if="menu" class="fixed inset-0 h-screen w-full text-white text-xl z-30 pl-16 ease-in duration-200 md:hidden">
+            <div id="overlay" class="absolute inset-0 w-full h-full bg-black opacity-80 -z-10"></div>
+            <ul id="links" class="h-full flex flex-col justify-center items-start space-y-10 text-4xl text-white z-10">
                 <li>About Us</li>
                 <li>Our Work</li>
                 <li>Our Services</li>
@@ -103,7 +104,7 @@ export default {
   position: absolute;
   height: 2.5px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 1px;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);

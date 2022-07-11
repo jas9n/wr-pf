@@ -25,3 +25,7 @@ html {
   box-sizing: border-box;
   overflow-x: hidden;
 }
+
+body {
+  background-color: #000;
+}
