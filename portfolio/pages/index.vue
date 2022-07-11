@@ -17,12 +17,12 @@
     </home-section>
     <section id="check-work" class="h-auto min-h-screen w-full flex justify-center items-center">
       <div id="content" class="w-11/12 max-w-4xl flex flex-col justify-center items-center px-8 space-y-8 text-white text-center">
-        <h2 class="text-6xl font-medium overflow-visible">Check out our projects.</h2>
+        <h2 class="text-6xl font-medium overflow-visible">Check out our client.</h2>
       <div id="container" class="marker:flex flex-col justify-center items-center space-y-6 md:space-y-0 md:grid md:grid-cols-2 md:grid-flow-row md:gap-8">
-        <projects/>
-        <projects/>
-        <projects/>
-        <projects/>
+        <client/>
+        <client/>
+        <client/>
+        <client/>
       </div>
       <button class="px-4 py-2 border border-white text-lg text-white rounded ease-in duration-200 hover:bg-white hover:text-black">
         <p>More Work</p>
