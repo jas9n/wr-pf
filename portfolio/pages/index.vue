@@ -18,7 +18,7 @@
     <section id="projects" class="h-auto min-h-screen w-full flex justify-center items-center">
       <div id="content" class="w-11/12 max-w-4xl flex flex-col justify-center items-center px-8 space-y-8 text-white text-center">
         <h2 class="text-6xl font-medium overflow-visible">Check out our projects.</h2>
-      <div id="container" class="marker:flex flex-col justify-center items-center space-y-6 md:space-y-0 md:grid md:grid-cols-2 md:grid-flow-row md:gap-8">
+      <div id="container" class="w-full flex flex-col justify-center items-center space-y-6 md:space-y-0 md:grid md:grid-cols-2 md:grid-flow-row md:gap-8">
         <client/>
         <client/>
         <client/>
