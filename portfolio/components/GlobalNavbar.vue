@@ -4,19 +4,18 @@
             <div id="content" class="w-full h-full flex justify-between items-center">
                 <div id="title" class="h-10">
                     <nuxt-link to="/">
-                        <h1 class="text-3xl  font-semibold mx-1 text-white overflow-visible">WebRising</h1>
+                        <h1 class="text-3xl font-semibold mx-1 text-white overflow-visible group"><span>Web</span><span class="ease-in duration-150 group-hover:text-rose-300">Rising</span></h1>
                     </nuxt-link>
                 </div>
                 <ul id="links" class="hidden justify-center items-center space-x-10 text-lg text-white md:flex lg:space-x-14">
-                    <li>About Us</li>
-                    <li>Our Work</li>
-                    <li>Our Services</li>
+                    <li class="relative table-cell"><nuxt-link to="/about" id="underline" class="relative inline-block py-1">About Us</nuxt-link></li>
+                    <li class="relative table-cell"><nuxt-link to="/projects" id="underline" class="relative inline-block py-1">Our Work</nuxt-link></li>
+                    <li class="relative table-cell"><nuxt-link to="/services" id="underline" class="relative inline-block py-1">Our Services</nuxt-link></li>
                 </ul>
-                <a id="contact" class="hidden md:block" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=team@webrising.org" target="_blank">
-                    <button class="px-4 py-2 border border-white text-base text-white rounded ease-in duration-200 hover:bg-white hover:text-black">
-                        <p>Contact Us</p>
-                    </button>
-                </a>
+                
+                <button class="px-4 py-2 border border-rose-300 text-base text-rose-300 rounded ease-in duration-200 hover:bg-rose-300  hover:text-black hidden md:block">
+                    <a id="contact" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=team@webrising.org" target="_blank">Contact Us</a>
+                </button>
                 <div id="toggle" class="right-10 flex justify-center items-center xborder border-white w-12 h-12 rounded-full z-40 cursor-pointer transition duration-150 md:hidden">
                     <div id="menu-icon" @click="toggleMenu">
                         <span class="bg-white"></span>
@@ -28,13 +27,12 @@
         </div>
         <div id="menu" v-if="menu" class="fixed inset-0 h-screen w-full text-white text-xl z-30 pl-16 ease-in duration-200 md:hidden">
             <div id="overlay" class="absolute inset-0 w-full h-full bg-black opacity-80 -z-10"></div>
-            <ul id="links" class="h-full flex flex-col justify-center items-start space-y-10 text-4xl text-white z-10">
-                <li>About Us</li>
-                <li>Our Work</li>
-                <li>Our Services</li>
-                <a id="contact" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=team@webrising.org" target="_blank">
-                    <li>Contact Us</li>
-                </a>
+            <ul id="links" class="h-full flex flex-col justify-center items-start space-y-8 text-4xl text-white z-10">
+                <li class="relative table-cell"><nuxt-link to="/about" id="underline" class="relative inline-block py-2">About Us</nuxt-link></li>
+                <li class="relative table-cell"><nuxt-link to="/projects" id="underline" class="relative inline-block py-2">Our Work</nuxt-link></li>
+                <li class="relative table-cell"><nuxt-link to="/services" id="underline" class="relative inline-block py-2">Our Services</nuxt-link></li>
+                <li class="relative table-cell"><a id="underline" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=team@webrising.org" target="_blank" class="relative inline-block py-2">Contact Us</a></li>
+                
             </ul>
         </div>
     </div>
@@ -98,7 +96,6 @@ export default {
   transition: .5s ease-in-out;
   cursor: pointer;
 }
-
 #menu-icon span {
   display: block;
   position: absolute;
@@ -116,7 +113,6 @@ export default {
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
 }
-
 #menu-icon span:nth-child(1) {
   top: 0px;
   -webkit-transform-origin: left center;
@@ -124,7 +120,6 @@ export default {
   -o-transform-origin: left center;
   transform-origin: left center;
 }
-
 #menu-icon span:nth-child(2) {
   top: 8px;
   -webkit-transform-origin: left center;
@@ -132,7 +127,6 @@ export default {
   -o-transform-origin: left center;
   transform-origin: left center;
 }
-
 #menu-icon span:nth-child(3) {
   top: 16px;
   -webkit-transform-origin: left center;
@@ -140,7 +134,6 @@ export default {
   -o-transform-origin: left center;
   transform-origin: left center;
 }
-
 #menu-icon.open span:nth-child(1) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -149,12 +142,10 @@ export default {
   top: 0px;
   left: 3.8px;
 }
-
 #menu-icon.open span:nth-child(2) {
   width: 0%;
   opacity: 0;
 }
-
 #menu-icon.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -162,5 +153,22 @@ export default {
   transform: rotate(-45deg);
   top: 18px;
   left: 3.8px;
+}
+
+#underline:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1.5px;
+  left: 50%;
+  position: absolute;
+  background: rgb(253 164 175);
+  transition: width 0.4s ease 0s, left 0.4s ease 0s;
+  width: 0;
+}
+#underline:hover:after { 
+  width: 100%; 
+  left: 0; 
 }
 </style>
