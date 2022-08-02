@@ -25,6 +25,7 @@
                 </div>
             </div>
         </div>
+
         <div id="menu" v-if="menu" class="fixed inset-0 h-screen w-full text-white text-xl z-30 pl-16 ease-in duration-200 md:hidden">
             <div id="overlay" class="absolute inset-0 w-full h-full bg-black opacity-80 -z-10"></div>
             <ul id="links" class="h-full flex flex-col justify-center items-start space-y-8 text-4xl text-white z-10">
@@ -32,7 +33,6 @@
                 <li class="relative table-cell"><nuxt-link to="/projects" id="underline" class="relative inline-block py-2">Our Work</nuxt-link></li>
                 <li class="relative table-cell"><nuxt-link to="/services" id="underline" class="relative inline-block py-2">Our Services</nuxt-link></li>
                 <li class="relative table-cell"><a id="underline" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=team@webrising.org" target="_blank" class="relative inline-block py-2">Contact Us</a></li>
-                
             </ul>
         </div>
     </div>
