@@ -1,6 +1,6 @@
 <template>
     <div id="footer">
-        <div id="container" class="w-full h-52 flex flex-col justify-between items-center py-12 overflow-hidden md:flex-row md:h-44 md:px-16 lg:px-20">
+        <div id="container" class="w-full h-[25vh] flex flex-col justify-between items-center py-12 overflow-hidden md:flex-row sm:h-[30vh] lg:h-[25vh] md:px-16 lg:px-20">
             <div id="links" class="overflow-visible flex flex-col justify-center items-center md:items-start">
                 <a id="contact" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=team@webrising.org" target="_blank">
                     <h5 class="text-white text-xl font-medium">team@webrising.org</h5>
@@ -16,13 +16,13 @@
                 <li class="relative table-cell"><a id="underline" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=team@webrising.org" target="_blank" class="relative inline-block pb-1">Contact</a></li>
             </ul>
         </div>
-        <h6 id="copyright" class="text-center text-zinc-500 text-sm font-semibold md:mx-16 mb-8 lg:mx-20 md:text-left">Copyright 2022 WebRising All Rights Reserved</h6>
+        <h6 id="copyright" class="text-center text-zinc-500 text-sm font-semibold mb-8 md:mx-16 lg:mx-20 md:text-left">Copyright 2022 WebRising All Rights Reserved</h6>
     </div>
 </template>
 
 <script>
 export default {
-    name:"Footer"
+    name: "Footer",
 }
 </script>
 
@@ -43,5 +43,10 @@ export default {
 #underline:hover:after { 
   width: 100%; 
   left: 0; 
+}
+
+a.nuxt-link-active {
+    /* font-weight: 600; */
+    color: rgb(253 164 175)
 }
 </style>

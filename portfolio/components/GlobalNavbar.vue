@@ -173,6 +173,7 @@ export default {
 }
 
 a.nuxt-link-active {
-    font-weight: 600;
+    /* font-weight: 600; */
+    color: rgb(253 164 175)
 }
 </style>
