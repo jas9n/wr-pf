@@ -25,6 +25,52 @@
 
 <script>
 export default {
-  name: 'About',
+    name: "About",
+    data() {
+    return {
+      members: [
+        {
+          name: "Christopher Heo",
+          image1: "heo1.jpg",
+          image2: "heo1.jpg",
+          position: "Founder, CEO",
+          git: "https://github.com/heochristopher",
+          in: "https://www.linkedin.com/in/heochristopher/",
+          mail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=christopher.heo1223@gmail.com",
+        },
+        {
+          name: "Jason Chen",
+          image1: "jason.jpg",
+          image2: "jason.jpg",
+          position: "Co-founder, Creative Director",
+          git: "https://github.com/jchn3805",
+          mail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=jasonc3805@gmail.com",
+        },
+        {
+          name: "Michael Chen",
+          image1: "michael.jpg",
+          image2: "michael.jpg",
+          position: "Developer",
+          git: "https://github.com/Blanku-cloud",
+          mail: "pokemondinner321@gmail.com",
+        },
+        {
+          name: "Johnson Wang",
+          image1: "johnson.jpg",
+          image2: "johnson.jpg",
+          position: "Developer",
+          git: "https://github.com/J0hns0n-Wang",
+        },
+        {
+          name: "Hashir Abbasi",
+          image1: "hashir.jpg",
+          image2: "hashir.jpg",
+          position: "Developer",
+          git: "https://github.com/guardianinferno",
+          mail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=hashirabbasi112@gmail.com",
+        },
+      ],
+    };
+  },
 }
 </script>

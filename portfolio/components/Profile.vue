@@ -1,14 +1,25 @@
 <template>
-  <div id="profile">
-    <div id="content" class="w-80 h-80 flex justify-center items-center cursor-pointer group border border-black rounded-sm sm:w-96 sm:h-96 md:w-80 md:h-80 lg:w-96 lg:h-96">
-      <div class="w-full h-full aspect-square object-cover overflow-hidden ease-in duration-200 group-hover:scale-110">
-        <img src="" alt="" />
-      </div>
-      <div id="overlay" class="absolute w-80 h-80 flex flex-col justify-center z-10 items-center space-y-1 sm:w-96 sm:h-96 md:w-80 md:h-80 lg:w-96 lg:h-96">
-        <div class="absolute w-full h-full bg-black opacity-0 -z-10 ease-in duration-200 group-hover:opacity-60"></div>
-        <div class="text-white ease-in duration-200 opacity-0 group-hover:opacity-100">
-          <h3 class="text-2xl font-medium">Team Member</h3>
-          <h4 class="text-lg">Position</h4>
+    <div id="profile" class="w-full max-w-[20rem] h-[35rem] text-white overflow-hidden mx-6 my-4">
+        <div id="pic-container" class="w-full h-[25rem] overflow-hidden relative">
+             <img :src="require(`@/assets/profiles/${image1}`)" class="w-full h-full overflow-hidden object-cover mb-4" alt="" id="pic1">
+             <!-- <img :src="require(`@/assets/profiles/${image2}`)" alt="" id="pic2"> -->
+        </div>
+        <div id="container">
+            <div id="person" class="w-full flex flex-col justify-center items-start">
+                <h4 class="text-2xl font-semibold mt-2">{{name}}</h4>
+                <p class="text-lg mt-1">{{position}}</p>
+            </div>
+            <div id="links" class="flex flex-row items-start content-start pt-4 space-x-8">
+                <a id="gitmark" class="flex justify-center items-center h-8 w-8 object-cover" :href="gitlink" target="_blank">
+                    <img src="@/assets/icons/gitmark.png" alt="">
+                </a>
+                <a v-if="inlink" id="inmark" class="flex justify-center items-center h-8 w-8 object-cover" :href="inlink" target="_blank">
+                    <img src="@/assets/icons/inmark.png" alt="">
+                </a>
+                <a id="gmail" class="flex justify-center items-center h-8 w-8 object-cover" :href="maillink" target="_blank">
+                    <img src="@/assets/icons/gmail.png" alt="">
+                </a>
+            </div>
         </div>
       </div>
     </div>
@@ -17,6 +28,18 @@
 
 <script>
 export default {
-  name: 'TeamProfile',
+    name: "TeamProfile",
+    props: {
+        name: String,
+        image1: String,
+        image2: String,
+        position: String,
+        gitlink: String,
+        inlink: {
+            type: String,
+            required: false
+        },
+        maillink: String,
+    }
 }
 </script>

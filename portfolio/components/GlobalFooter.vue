@@ -44,4 +44,9 @@ export default {
   width: 100%;
   left: 0;
 }
+
+a.nuxt-link-active {
+    /* font-weight: 600; */
+    color: rgb(253 164 175)
+}
 </style>
