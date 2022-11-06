@@ -10,7 +10,7 @@
       </div>
     </section>
     <section class="h-screen w-full flex justify-center items-center">
-      <div id="content" class="w-5/6 h-full max-w-4xl flex flex-col justify-around items-center px-8  text-white ">
+      <div id="content" class="w-5/6 h-full max-w-4xl flex flex-col justify-center items-center px-8  text-white space-y-40">
         <div id="potential" class="text-left space-y-2">
           <h2 class="text-4xl font-medium overflow-visible md:text-5xl">Don't limit your potential.</h2>
           <p class="text-xl">We have the resources and technical expertise to craft your streamlined platform.</p>
@@ -21,17 +21,15 @@
         </div>
       </div>
     </section>
-    <section id="projects" class="h-auto min-h-screen w-full flex justify-center items-center">
+    <section id="projects" class="h-auto pt-20 min-h-screen w-full flex justify-center items-center">
       <div id="content" class="w-full max-w-4xl flex flex-col justify-center items-center space-y-8 text-white text-center">
         <h2 class="text-4xl font-medium overflow-visible px-8 sm:text-5xl">Our amazing clients.</h2>
-        <div id="container" class="w-full flex flex-col justify-center items-center space-y-6">
-          <!-- <client/>
-        <client/>
-        <client/>
-        <client/> -->
+        <div id="container" class="w-full flex flex-col justify-center items-center space-y-6 lg:flex-row lg:space-y-0 lg:space-x-6">
+          <client-profile/>
+          <client-profile/>
         </div>
         <nuxt-link to="/projects" class="px-4 py-2 border border-white text-lg text-white rounded ease-in duration-200 hover:bg-white hover:text-black">
-          <p>More Projects</p>
+          <p>More Work</p>
         </nuxt-link>
       </div>
     </section>
