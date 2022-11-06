@@ -3,21 +3,27 @@
     <global-navbar />
     <div id="birds" class="fixed inset-0 bg-black h-screen -z-20"></div>
     <div id="overlay" class="fixed inset-0 bg-black opacity-40 h-screen -z-10"></div>
-    <home-section id="splash">
-      <h2 id="weare" class="text-6xl font-medium overflow-visible">We are WebRising.</h2>
-      <p id="built" class="text-xl">Built by high school developers — for you, for free.</p>
-    </home-section>
-    <home-section>
-      <h2 class="text-6xl font-medium overflow-visible">Don't limit your potential.</h2>
-      <p class="text-xl">We have the resources and technical expertise to craft streamlined platforms.</p>
-    </home-section>
-    <home-section>
-      <h2 class="text-6xl font-medium overflow-visible">Tailored to your needs.</h2>
-      <p class="text-xl">Showcase your products, market your business, or sell your services.</p>
-    </home-section>
+    <section class="h-screen w-full flex justify-center items-center" id="splash">
+      <div id="content" class="w-5/6 max-w-4xl flex flex-col justify-center items-center px-8 space-y-4 text-white text-center">
+        <h2 id="weare" class="text-6xl font-medium overflow-visible">We are WebRising.</h2>
+        <p id="built" class="text-xl">Built by high school developers — for you, for free.</p>     
+      </div>
+    </section>
+    <section class="h-screen w-full flex justify-center items-center">
+      <div id="content" class="w-5/6 h-full max-w-4xl flex flex-col justify-around items-center px-8  text-white ">
+        <div id="potential" class="text-left space-y-2">
+          <h2 class="text-4xl font-medium overflow-visible md:text-5xl">Don't limit your potential.</h2>
+          <p class="text-xl">We have the resources and technical expertise to craft your streamlined platform.</p>
+        </div>
+        <div id="tailored" class="text-right space-y-2">
+          <h2 class="text-4xl font-medium overflow-visible md:text-5xl">Tailored to your needs.</h2>
+          <p class="text-xl">Market your business, sell your products, or promote your services.</p>
+        </div>
+      </div>
+    </section>
     <section id="projects" class="h-auto min-h-screen w-full flex justify-center items-center">
       <div id="content" class="w-full max-w-4xl flex flex-col justify-center items-center space-y-8 text-white text-center">
-        <h2 class="text-6xl font-medium overflow-visible px-8">Check out our projects.</h2>
+        <h2 class="text-4xl font-medium overflow-visible px-8 sm:text-5xl">Our amazing clients.</h2>
         <div id="container" class="w-full flex flex-col justify-center items-center space-y-6">
           <!-- <client/>
         <client/>
@@ -25,7 +31,7 @@
         <client/> -->
         </div>
         <nuxt-link to="/projects" class="px-4 py-2 border border-white text-lg text-white rounded ease-in duration-200 hover:bg-white hover:text-black">
-          <p>More Work</p>
+          <p>More Projects</p>
         </nuxt-link>
       </div>
     </section>
