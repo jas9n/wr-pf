@@ -9,22 +9,22 @@
         <p id="built" class="text-xl">Built by high school developers — for you, for free.</p>     
       </div>
     </section>
-    <section class="h-screen w-full flex justify-center items-center">
+    <section id="scroll" class="h-[80vh] w-full flex justify-center items-center">
       <div id="content" class="w-5/6 h-full max-w-4xl flex flex-col justify-center items-center px-8  text-white space-y-40">
-        <div id="potential" class="text-left space-y-2">
-          <h2 class="text-4xl font-medium overflow-visible md:text-5xl">Don't limit your potential.</h2>
-          <p class="text-xl">We have the resources and technical expertise to craft your streamlined platform.</p>
+        <div id="potential" class="text-center space-y-2 max-w-2xl">
+          <!-- <h2 class="text-4xl font-medium overflow-visible md:text-5xl">Don't limit your potential.</h2> -->
+          <p class="text-2xl md:text-3xl"><span class="font-bold overflow-visible">Don't limit your potential.</span> We have the resources and technical expertise to craft your streamlined platform.</p>
         </div>
-        <div id="tailored" class="text-right space-y-2">
-          <h2 class="text-4xl font-medium overflow-visible md:text-5xl">Tailored to your needs.</h2>
-          <p class="text-xl">Market your business, sell your products, or promote your services.</p>
+        <div id="tailored" class="text-center space-y-2 max-w-2xl">
+          <!-- <h2 class="text-4xl font-medium overflow-visible md:text-5xl">Tailored to your needs.</h2> -->
+          <p class="text-2xl md:text-3xl"><span class="font-bold overflow-visible">Tailored to your needs.</span> Market your business, sell your products, or promote your services.</p>
         </div>
       </div>
     </section>
-    <section id="projects" class="h-auto pt-20 min-h-screen w-full flex justify-center items-center">
+    <section id="projects" class="h-auto pt-40 min-h-screen w-full flex justify-center items-center">
       <div id="content" class="w-full max-w-4xl flex flex-col justify-center items-center space-y-8 text-white text-center">
-        <h2 class="text-4xl font-medium overflow-visible px-8 sm:text-5xl">Our amazing clients.</h2>
-        <div id="container" class="w-full flex flex-col justify-center items-center space-y-6 lg:flex-row lg:space-y-0 lg:space-x-6">
+        <h2 class="text-5xl font-medium overflow-visible px-8 ">Our amazing clients.</h2>
+        <div id="container" class="w-full overflow-visible flex flex-col justify-center items-center space-y-6 lg:flex-row lg:space-y-0 lg:space-x-6">
           <client-profile/>
           <client-profile/>
         </div>
@@ -60,11 +60,22 @@ export default {
     return {}
   },
   mounted() {
-    gsap
-      .timeline({ defaults: { duration: 1 } })
-      .from('#splash', { opacity: 0, ease: 'power3.in' }, 0)
-      .from('#weare', { y: -30, opacity: 0, ease: 'power2.out' }, 1)
-      .from('#built', { y: -20, opacity: 0, ease: 'power2.out' }, 2)
+    const splash = gsap.timeline({ defaults: { duration: 1 } })
+    splash.from('#splash', { opacity: 0, ease: 'power3.in' }, 0)
+    splash.from('#weare', { y: -30, opacity: 0, ease: 'power2.out' }, 1)
+    splash.from('#built', { y: -20, opacity: 0, ease: 'power2.out' }, 2)
+
+    const scroll = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".scroll",
+      start: "top top",
+      end: "+550px",
+      scrub: 1,
+      },
+    });
+
+    scroll.fromTo("#potential", { x: 800, opacity: 0 }, { x: 0, opacity: 1 }, 0.5);
+    scroll.fromTo("#tailored", { x: -800, opacity: 0 }, { x: 0, opacity: 1 }, 0.5);
 
     this.vantaEffect = BIRDS({
       el: '#birds',
