@@ -25,8 +25,8 @@
       <div id="content" class="w-full max-w-4xl flex flex-col justify-center items-center space-y-8 text-white text-center">
         <h2 class="text-5xl font-medium overflow-visible px-8 ">Our amazing clients.</h2>
         <div id="container" class="w-full overflow-visible flex flex-col justify-center items-center space-y-6 lg:flex-row lg:space-y-0 lg:space-x-6">
-          <client-profile/>
-          <client-profile/>
+          <client-profile id="client"/>
+          <client-profile id="client"/>
         </div>
         <nuxt-link to="/projects" class="px-4 py-2 border border-white text-lg text-white rounded ease-in duration-200 hover:bg-white hover:text-black">
           <p>More Work</p>
@@ -76,6 +76,20 @@ export default {
 
     scroll.fromTo("#potential", { x: 800, opacity: 0 }, { x: 0, opacity: 1 }, 0.5);
     scroll.fromTo("#tailored", { x: -800, opacity: 0 }, { x: 0, opacity: 1 }, 0.5);
+
+    const scroll2 = gsap.timeline({ 
+      scrollTrigger: {
+        trigger: ".projects",
+        start: "top top",
+        // end: "+550px",
+        // scrub: 1,
+      }, 
+
+      defaults: { duration: 1 }
+    })
+
+    scroll2.from('#client', { y: 40, opacity: 0, ease: 'power2.out' }, 1)
+    // scroll2.fromTo("#client", { y: 30, opacity: 0 }, { y: 0, opacity: 1 }, 0.5);
 
     this.vantaEffect = BIRDS({
       el: '#birds',
