@@ -17,16 +17,8 @@
     <section id="team" class="h-auto min-h-screen w-full flex flex-col justify-center items-center text-white text-center space-y-4">
       <h2 class="w-3/4 text-5xl font-medium overflow-visible">Our team.</h2>
       <p class="w-3/4 text-lg">Meet our dedicated team of designers, artists, and writers.</p>
-      <div id="content" class="h-auto w-3/4 flex flex-col justify-center items-center">
-        <!-- <team-profile 
-          v-for="member in members"
-          :name="members.name"
-          :image1="members.image1"
-          :position="members.position"
-          :gitlink="members.git"
-          :inlink="members.in"
-          :maillink="members.mail"
-        /> -->
+      <div id="content" class="h-auto w-5/6 flex flex-row flex-wrap justify-center items-center">
+        <team-profile v-for="member in members" :key="member.name" :name="member.name" :image="member.image" :position="member.position" :gitlink="member.git" :inlink="member.in" :maillink="member.mail" />
       </div>
     </section>
     <global-footer />
@@ -35,52 +27,47 @@
 
 <script>
 export default {
-    name: "About",
-    data() {
+  name: 'About',
+  data() {
     return {
       members: [
         {
-          name: "Christopher Heo",
-          image1: "heo1.jpg",
-          image2: "heo1.jpg",
-          position: "Founder, CEO",
-          git: "https://github.com/heochristopher",
-          in: "https://www.linkedin.com/in/heochristopher/",
-          mail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=christopher.heo1223@gmail.com",
+          name: 'Christopher Heo',
+          image: 'heo.jpg',
+          position: 'Founder, CEO',
+          git: 'https://github.com/heochristopher',
+          in: 'https://www.linkedin.com/in/heochristopher/',
+          mail: 'christopher.heo1223@gmail.com',
         },
         {
-          name: "Jason Chen",
-          image1: "jason.jpg",
-          image2: "jason.jpg",
-          position: "Co-founder, Creative Director",
-          git: "https://github.com/jchn3805",
-          mail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=jasonc3805@gmail.com",
+          name: 'Jason Chen',
+          image: 'jason.jpg',
+          position: 'Co-founder, Creative Director',
+          git: 'https://github.com/jchn3805',
+          mail: 'jasonc3805@gmail.com',
         },
         {
-          name: "Michael Chen",
-          image1: "michael.jpg",
-          image2: "michael.jpg",
-          position: "Developer",
-          git: "https://github.com/Blanku-cloud",
-          mail: "pokemondinner321@gmail.com",
+          name: 'Michael Chen',
+          image: 'michael.jpg',
+          position: 'Lead Developer',
+          git: 'https://github.com/Blanku-cloud',
+          mail: 'pokemondinner321@gmail.com',
         },
         {
-          name: "Johnson Wang",
-          image1: "johnson.jpg",
-          image2: "johnson.jpg",
-          position: "Developer",
-          git: "https://github.com/J0hns0n-Wang",
+          name: 'Johnson Wang',
+          image: 'johnson.jpg',
+          position: 'Developer',
+          git: 'https://github.com/J0hns0n-Wang',
         },
         {
-          name: "Hashir Abbasi",
-          image1: "hashir.jpg",
-          image2: "hashir.jpg",
-          position: "Developer",
-          git: "https://github.com/guardianinferno",
-          mail: "https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=hashirabbasi112@gmail.com",
+          name: 'Hashir Abbasi',
+          image: 'hashir.jpg',
+          position: 'Developer',
+          git: 'https://github.com/guardianinferno',
+          mail: 'hashirabbasi112@gmail.com',
         },
       ],
-    };
+    }
   },
 }
 </script>
