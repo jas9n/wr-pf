@@ -21,10 +21,10 @@
         </div>
       </div>
     </section>
-    <section id="projects" class="h-auto pt-40 min-h-screen w-full flex justify-center items-center">
+    <section id="projects" class="h-auto pt-40 min-h-screen w-full flex justify-center items-center px-12">
       <div id="content" class="w-full max-w-4xl flex flex-col justify-center items-center space-y-8 text-white text-center">
         <h2 class="text-5xl font-medium overflow-visible px-8">Our clients.</h2>
-        <div id="container" class="w-full overflow-visible flex flex-col justify-center items-center space-y-6 lg:flex-row lg:space-y-0 lg:space-x-6">
+        <div id="container" class="w-full overflow-visible flex flex-row flex-wrap justify-center items-center gap-6">
           <client-profile :name="'K-Spirit Taekwondo'" :details="'A Brooklyn Taekwondo Studio'" :image="'tkd.jpg'" />
           <client-profile :name="'Ready, Set, Spike!'" :details="'NYC-based Volleyball Nonprofit'" :image="'rss.jpg'" />
         </div>

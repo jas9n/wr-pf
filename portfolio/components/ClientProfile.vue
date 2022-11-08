@@ -7,8 +7,8 @@
       <div id="overlay" class="absolute flex flex-col justify-center z-10 items-center">
         <div class="absolute w-full h-full bg-black opacity-0 -z-10 ease-in duration-200 group-hover:opacity-60"></div>
         <div class="text-white ease-in duration-200 opacity-0 space-y-2 group-hover:opacity-100">
-          <h3 class="text-2xl font-medium">{{ name }}</h3>
-          <h4 class="text-lg">{{ details }}</h4>
+          <h3 class="text-2xl font-medium text-center">{{ name }}</h3>
+          <h4 class="text-lg text-center">{{ details }}</h4>
         </div>
       </div>
     </div>
