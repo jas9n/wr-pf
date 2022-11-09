@@ -15,7 +15,7 @@
         <a v-if="inlink" id="inmark" class="flex justify-center items-center h-8 w-8 object-cover" :href="inlink" target="_blank">
           <img src="../assets/icons/inmark.png" alt="" />
         </a>
-        <a v-if="maillink" id="gmail" class="flex justify-center items-center h-8 w-8 object-cover" :href="`https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=${maillink}`" target="_blank">
+        <a v-if="maillink" id="gmail" class="flex justify-center items-center h-8 w-8 object-cover" :href="`https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=${maillink}`" target="_blank"> 
           <img src="../assets/icons/gmail.png" alt="" />
         </a>
       </div>

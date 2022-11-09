@@ -23,10 +23,14 @@
     </section>
     <section id="projects" class="h-auto pt-40 min-h-screen w-full flex justify-center items-center px-12">
       <div id="content" class="w-full max-w-4xl flex flex-col justify-center items-center space-y-8 text-white text-center">
-        <h2 class="text-5xl font-medium overflow-visible px-8">Our clients.</h2>
-        <div id="container" class="w-full overflow-visible flex flex-row flex-wrap justify-center items-center gap-6">
-          <client-profile :name="'K-Spirit Taekwondo'" :details="'A Brooklyn Taekwondo Studio'" :image="'tkd.jpg'" />
-          <client-profile :name="'Ready, Set, Spike!'" :details="'NYC-based Volleyball Nonprofit'" :image="'rss.jpg'" />
+        <h2 class="text-5xl font-medium overflow-hidden px-8">Our clients.</h2>
+        <div id="container" class="w-full overflow-hidden flex flex-row flex-wrap justify-center items-center gap-6">
+          <nuxt-link to="/projects">
+            <client-profile :name="'K-Spirit Taekwondo'" :details="'A Brooklyn Taekwondo Studio'" :image="'tkd.jpg'" />
+          </nuxt-link>
+          <nuxt-link to="/projects">
+            <client-profile :name="'Ready, Set, Spike!'" :details="'NYC-based Volleyball Nonprofit'" :image="'rss.jpg'" />
+          </nuxt-link>
         </div>
         <nuxt-link to="/projects" class="px-4 py-2 border border-white text-lg text-white rounded ease-in duration-200 hover:bg-white hover:text-black">
           <p>More Work</p>
