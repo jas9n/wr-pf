@@ -16,7 +16,7 @@
                 <button class="px-4 py-2 border border-rose-300 text-base text-rose-300 rounded ease-in duration-200 hover:bg-rose-300  hover:text-black hidden md:block">
                     <a id="contact" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=team@webrising.org" target="_blank">Contact Us</a>
                 </button>
-                <div id="toggle" class="right-10 flex justify-center items-center xborder border-white w-12 h-12 rounded-full z-40 cursor-pointer transition duration-150 md:hidden">
+                <div id="toggle" class="right-10 flex justify-center items-center border border-white w-12 h-12 rounded-full z-40 cursor-pointer transition duration-150 md:hidden">
                     <div id="menu-icon" @click="toggleMenu">
                         <span class="bg-white"></span>
                         <span class="bg-white"></span>
