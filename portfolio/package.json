@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
+    "dev": "node --openssl-legacy-provider ./node_modules/.bin/nuxt",
+    "build": "node --openssl-legacy-provider ./node_modules/.bin/nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "node --openssl-legacy-provider ./node_modules/.bin/nuxt generate",
     "lint:prettier": "prettier --check .",
     "lint": "npm run lint:prettier",
     "lintfix": "prettier --write --list-different ."
