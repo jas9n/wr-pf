@@ -43,7 +43,7 @@ export default {
           name: 'Jason Chen',
           image: 'jason.jpg',
           position: 'Co-founder, Creative Director',
-          git: 'https://github.com/jchn3805',
+          git: 'https://github.com/jas9n',
           mail: 'jasonc3805@gmail.com',
         },
         {
