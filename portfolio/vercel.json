@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "buildCommand": "npm run generate",
+  "buildCommand": "nuxt generate",
   "outputDirectory": "dist",
   "installCommand": "npm install",
-  "framework": "nuxtjs",
-  "routes": [
-    {
-      "src": "/.*",
-      "dest": "/index.html"
+  "env": {
+    "NODE_OPTIONS": "--openssl-legacy-provider"
+  },
+  "build": {
+    "env": {
+      "NODE_OPTIONS": "--openssl-legacy-provider"
     }
-  ]
+  }
 } 
