@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "buildCommand": "npm run generate",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "framework": "nuxtjs",
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "/index.html"
+    }
+  ]
+} 
